@@ -31,6 +31,18 @@
         header h1 {
             font-size: 1.8em; /* Réduction de la taille du titre */
             margin: 0;
+            cursor: pointer; /* Curseur modifié pour indiquer que le texte est cliquable */
+            transition: color 0.3s ease;
+        }
+
+        header h1:active {
+            animation: click-effect 0.5s ease; /* Animation lors du clic */
+        }
+        
+        @keyframes click-effect {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+            100% { transform: scale(1); }
         }
         
         nav {
@@ -45,6 +57,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: 700;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
@@ -73,15 +86,31 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
         }
 
+        .section p {
+            cursor: pointer; /* Curseur modifié pour indiquer que le texte est cliquable */
+            transition: color 0.3s ease;
+        }
+
+        .section p:active {
+            color: #4CAF50; /* Changement de couleur au clic */
+            animation: click-effect 0.5s ease;
+        }
+
         img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
             transition: transform 0.3s ease;
+            cursor: pointer; /* Curseur modifié pour indiquer que l'image est cliquable */
         }
 
         img:hover {
             transform: scale(1.05); /* Légère augmentation de taille au survol */
+        }
+
+        img:active {
+            transform: scale(0.95); /* Réduction de taille lors du clic */
+            animation: click-effect 0.5s ease;
         }
 
         footer {
@@ -116,26 +145,26 @@
 
 <nav>
     <a href="#section1">La passion de Sofia envers Zemmour</a>
-    <a href="#section2">Sa passion envers les pieds (envoie les tiens stp) </a>
+    <a href="#section2">Sa passion envers les pieds (envoie les tiens stp)</a>
     <a href="#section3">Contact</a>
 </nav>
 
 <div class="container">
     <div id="section1" class="section">
         <h2>Section 1 : Introduction</h2>
-        <p>Zemmour dessiné par Sofia (elle a trop bien dessiné) .</p>
+        <p>Zemmour dessiné par Sofia (elle a trop bien dessiné).</p>
         <img src="https://cdn.discordapp.com/avatars/1274567661937889340/a24120d1c497eb771375457c0dd2f5bd.webp?size=1024&format=webp&width=0&height=204" alt="Exemple d'image">
     </div>
 
     <div id="section2" class="section">
-        <h2>Section 2 : Des pieds pour Sofia (elle kiffe) </h2>
-        <p>Tu kiffe ce que tu vois Sofia (non elle aime pas les pied en vrai) </p>
+        <h2>Section 2 : Des pieds pour Sofia (elle kiffe)</h2>
+        <p>Tu kiffe ce que tu vois Sofia (non elle aime pas les pieds en vrai)</p>
         <img src="https://i.pinimg.com/236x/89/aa/9a/89aa9a19919078d5803686f343ca0c77.jpg" alt="Une autre image">
     </div>
 
     <div id="section3" class="section">
-        <h2>Section 3 : Contactez Sofia </h2>
-        <p>Il est trop beau son profil (même si elle a pas nitro elle a dead sa) </p>
+        <h2>Section 3 : Contactez Sofia</h2>
+        <p>Il est trop beau son profil (même si elle a pas nitro elle a dead sa)</p>
         <img src="https://media.discordapp.net/attachments/1258834058176106556/1280567743720067082/image.png?ex=66d88d25&is=66d73ba5&hm=c980956c50601fb71067015c83876510bec62c74f51fb9f793794c49846e9e39&=&format=webp&quality=lossless&width=390&height=411" alt="Image de contact">
     </div>
 </div>
